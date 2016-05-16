@@ -1,0 +1,31 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="zt_rff_second_fiori.Carriers" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Carriers" titleLevel="H2">
+		<content>
+			<Table id="CarrierTable" inset="false"
+				items="{path:'/Carriers', sorter:'Carrname'}">				
+				<columns>
+					<Column>
+						<Text text="Name (ID)" />
+					</Column>
+					<Column>
+						<Text text="Currance" />
+					</Column>
+					<Column>
+						<Text text="URL" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active" press="handleShowFlights">
+						<cells>
+							<ObjectIdentifier title="{Carrname}" text="{Carrid}" />
+							<Text text="{Currcode}" />
+							<Text text="{Url}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+
+</core:View>
